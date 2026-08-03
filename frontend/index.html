@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChitVault</title>
+    <script>
+      window.addEventListener('error', function(event) {
+        const errorDiv = document.createElement('div');
+        errorDiv.style.position = 'fixed';
+        errorDiv.style.top = '0';
+        errorDiv.style.left = '0';
+        errorDiv.style.width = '100%';
+        errorDiv.style.height = '100%';
+        errorDiv.style.backgroundColor = '#fee2e2';
+        errorDiv.style.color = '#991b1b';
+        errorDiv.style.padding = '40px';
+        errorDiv.style.zIndex = '99999';
+        errorDiv.style.fontFamily = 'monospace';
+        errorDiv.style.fontSize = '16px';
+        errorDiv.style.overflow = 'auto';
+        errorDiv.innerHTML = '<h1>ChitVault Runtime Error</h1>' +
+          '<p><strong>Message:</strong> ' + event.message + '</p>' +
+          '<p><strong>File:</strong> ' + event.filename + '</p>' +
+          '<p><strong>Line/Col:</strong> ' + event.lineno + ':' + event.colno + '</p>' +
+          '<pre>' + (event.error ? event.error.stack : 'No stack trace available') + '</pre>';
+        document.body.appendChild(errorDiv);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
