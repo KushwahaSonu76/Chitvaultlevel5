@@ -198,3 +198,4 @@ Building on our **Feedback-Driven Improvement Plan (Section 10)**, the overarchi
 - Relies on manual Freighter interactions for signing transactions.
 - Does not currently support late entry once a round starts.
 
+
