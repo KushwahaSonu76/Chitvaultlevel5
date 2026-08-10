@@ -1,7 +1,7 @@
 # ChitVault: Trustless Rotating Savings Groups on Stellar (Level 5)
 
 > 🏆 **LEVEL 5 REQUIREMENT MET**: This project has successfully onboarded **75+ real user wallets** and generated **80+ on-chain transactions**. 
-> 👉 [Verify on Stellar.Expert](https://stellar.expert/explorer/testnet/contract/CA37YXVJRVR662WVSRUOYDCRH3V6IZGA2SFB76QZUJZ4XA2GZHPX5N4N) | [View Onboarded Users List](./onboarded_users.md)
+> 👉 [Verify on Stellar.Expert](https://stellar.expert/explorer/testnet/contract/CDUR55MLZLS7ROZBJ5PK2AQH3NBDC6KSCXXYZAEHLBQHRBSZPS2UCIZF) | [View Onboarded Users List](./onboarded_users.md)
 
 ChitVault is a decentralized, rotating savings and credit association (ROSCA) MVP built on the Stellar network using Soroban smart contracts. It enables communities to save money collectively, transparently, and without relying on a centralized organizer.
 
@@ -74,9 +74,9 @@ Analytics & Monitoring (PostHog & Sentry)
 ---
 
 ## 6. Deployed Contract
-- **Contract ID**: `CA37YXVJRVR662WVSRUOYDCRH3V6IZGA2SFB76QZUJZ4XA2GZHPX5N4N`
+- **Contract ID**: `CDUR55MLZLS7ROZBJ5PK2AQH3NBDC6KSCXXYZAEHLBQHRBSZPS2UCIZF`
 - **Network**: Stellar Testnet
-- **Stellar.Expert Link**: [View on Stellar.Expert](https://stellar.expert/explorer/testnet/contract/CA37YXVJRVR662WVSRUOYDCRH3V6IZGA2SFB76QZUJZ4XA2GZHPX5N4N)
+- **Stellar.Expert Link**: [View on Stellar.Expert](https://stellar.expert/explorer/testnet/contract/CDUR55MLZLS7ROZBJ5PK2AQH3NBDC6KSCXXYZAEHLBQHRBSZPS2UCIZF)
 
 ---
 
