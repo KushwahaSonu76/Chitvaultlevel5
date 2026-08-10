@@ -198,6 +198,14 @@ Building on our **Feedback-Driven Improvement Plan (Section 10)**, the overarchi
 - Relies on manual Freighter interactions for signing transactions.
 - Does not currently support late entry once a round starts.
 
+---
+
+## 18. GitHub & Contact Information
+- **GitHub Repository**: [Chitvaultlevel5](https://github.com/KushwahaSonu76/Chitvaultlevel5)
+- **Developer Profile**: [KushwahaSonu76](https://github.com/KushwahaSonu76)
+- **Developer Email**: sonukushwaha821304@gmail.com
+
+
 
 
 
