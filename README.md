@@ -81,7 +81,7 @@ Analytics & Monitoring (PostHog & Sentry)
 ---
 
 ## 7. Live Demo
-- **Live URL**: [Insert Live Production URL Here]
+- **Live URL**: [ChitVault Web App](https://chitvaultlevel5.vercel.app/)
 
 ---
 
