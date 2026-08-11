@@ -158,28 +158,30 @@ Based on the collected feedback, our roadmap for Level 6 and beyond includes:
 ---
 
 ## 12. Demo Video
-- **Full Product Walkthrough**: [Watch the Demo Video (Placeholder Link)]
+- **Full Product Walkthrough**: [Watch the Demo Video](https://photos.app.goo.gl/htxAw4eXdR5jDYz88)
 
 ---
 
 ## 13. Screenshots
 ### Product UI (Updated)
-[Insert updated Product UI screenshot link here]
+![ChitVault Landing](image.png)
+![ChitVault Dashboard](image-1.png)
 
 ### Analytics / Transaction Activity
-[Insert updated Analytics screenshot link here]
+![PostHog Telemetry](image-2.png)
+![CI/CD Github Actions Workflow](image-3.png)
 
 ### Mobile Responsive Design
-[Insert updated Mobile Responsive screenshot link here]
+![ChitVault Mobile Responsive](image-1.png)
 
 ---
 
 ## 14. Commit History Note
 The repository contains cumulative meaningful atomic commits. Key milestone commits for the Level 5 upgrade specifically include:
-- `a53dc37`: feat: implemented Guided Tour using local storage
-- `6b2b635`: feat: added Group Preview mode for unauthenticated users
-- `8ac99ed`: style: integrated react-hot-toast and DiceBear avatars
-- `37878d2`: docs: updated README with Level 5 metrics and feedback loop
+- `1f60f03`: feat: design Landing page with educational onboarding tooltips
+- `ad7ee16`: feat: build Dashboard showing active savings circles (with Preview Mode)
+- `6b4577f`: feat: build group details view with contribution and disbursement buttons (avatars & progress indicators)
+- `2e61dd8`: docs: add user feedback table with implementation commit IDs to README
 
 ---
 
