@@ -172,7 +172,7 @@ Based on the collected feedback, our roadmap for Level 6 and beyond includes:
 ![CI/CD Github Actions Workflow](image-3.png)
 
 ### Mobile Responsive Design
-![ChitVault Mobile Responsive](image-1.png)
+![ChitVault Mobile Responsive](image-4.png)
 
 ---
 
