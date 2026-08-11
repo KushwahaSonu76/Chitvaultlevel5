@@ -126,7 +126,7 @@ const Navigation = () => {
            <div className="bg-gradient-to-r from-[#6366F1] to-[#A855F7] text-white text-center py-2 px-4 text-sm font-medium">
              🚀 Help us reach Level 5!{' '}
              <a 
-               href="https://docs.google.com/forms/d/1azHCzFdNm0s4u35VnQucj6liT9nDSk_ktRindWeYhFA/viewform" 
+               href="https://docs.google.com/forms/d/1Kp_zkG56EDysinfOlHi5ZHyLMhuaiQIhEAOibGx5oMw/viewform" 
                target="_blank" 
                rel="noopener noreferrer" 
                className="underline font-bold hover:text-gray-200 transition-colors"
