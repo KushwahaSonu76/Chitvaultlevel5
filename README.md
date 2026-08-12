@@ -164,15 +164,15 @@ Based on the collected feedback, our roadmap for Level 6 and beyond includes:
 
 ## 13. Screenshots
 ### Product UI (Updated)
-![ChitVault Landing](image.png)
-![ChitVault Dashboard](image-1.png)
+![alt text](image.png)
+![alt text](image-1.png)
 
 ### Analytics / Transaction Activity
-![PostHog Telemetry](image-2.png)
-![CI/CD Github Actions Workflow](image-3.png)
+![alt text](image-2.png)
+![alt text](image-3.png)
 
 ### Mobile Responsive Design
-![ChitVault Mobile Responsive](image-4.png)
+![alt text](image-4.png)
 
 ---
 
