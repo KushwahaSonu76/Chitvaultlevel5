@@ -6,6 +6,7 @@ import Landing from './pages/Landing';
 import Dashboard from './pages/Dashboard';
 import CreateChit from './pages/CreateChit';
 import FAQ from './pages/FAQ';
+import ViewChit from './pages/ViewChit';
 import posthog from 'posthog-js'
 import * as Sentry from "@sentry/react";
 import { LogOut, Moon, Sun } from 'lucide-react';
