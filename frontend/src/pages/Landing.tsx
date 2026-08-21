@@ -32,26 +32,41 @@ const Landing = () => {
       </div>
 
       <div id="how-it-works" className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl w-full">
-        <div className="bg-[#140E28] p-8 rounded-2xl shadow-sm border border-[#8B85A7]/20 flex flex-col items-center text-center space-y-4">
+        <div className="bg-[#140E28] p-8 rounded-2xl shadow-sm border border-[#8B85A7]/20 flex flex-col items-center text-center space-y-4 group relative cursor-help">
           <div className="bg-[#6366F1]/10 p-4 rounded-full text-[#6366F1]">
             <Users size={32} />
           </div>
           <h3 className="text-xl font-bold text-[#F5F3FF]">Form a Group</h3>
           <p className="text-[#8B85A7]">Invite trusted members. Everyone agrees to contribute a fixed amount each month.</p>
+          
+          <div className="absolute -top-16 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[#6366F1] text-white text-sm rounded-lg py-2 px-4 pointer-events-none shadow-xl w-48 z-10">
+            Tip: Only the admin can invite new members before the round starts.
+            <div className="absolute bottom-[-4px] left-1/2 transform -translate-x-1/2 w-3 h-3 bg-[#6366F1] rotate-45"></div>
+          </div>
         </div>
-        <div className="bg-[#140E28] p-8 rounded-2xl shadow-sm border border-[#8B85A7]/20 flex flex-col items-center text-center space-y-4">
+        <div className="bg-[#140E28] p-8 rounded-2xl shadow-sm border border-[#8B85A7]/20 flex flex-col items-center text-center space-y-4 group relative cursor-help">
           <div className="bg-[#6366F1]/10 p-4 rounded-full text-[#6366F1]">
             <ShieldCheck size={32} />
           </div>
           <h3 className="text-xl font-bold text-[#F5F3FF]">Secure Escrow</h3>
           <p className="text-[#8B85A7]">Funds are locked in a Soroban smart contract. Nobody can access them out of turn.</p>
+
+          <div className="absolute -top-16 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[#6366F1] text-white text-sm rounded-lg py-2 px-4 pointer-events-none shadow-xl w-48 z-10">
+            Tip: Soroban smart contracts guarantee 100% security of your locked funds.
+            <div className="absolute bottom-[-4px] left-1/2 transform -translate-x-1/2 w-3 h-3 bg-[#6366F1] rotate-45"></div>
+          </div>
         </div>
-        <div className="bg-[#140E28] p-8 rounded-2xl shadow-sm border border-[#8B85A7]/20 flex flex-col items-center text-center space-y-4">
+        <div className="bg-[#140E28] p-8 rounded-2xl shadow-sm border border-[#8B85A7]/20 flex flex-col items-center text-center space-y-4 group relative cursor-help">
           <div className="bg-[#6366F1]/10 p-4 rounded-full text-[#6366F1]">
             <RefreshCw size={32} />
           </div>
           <h3 className="text-xl font-bold text-[#F5F3FF]">Rotate & Payout</h3>
           <p className="text-[#8B85A7]">Each round, once everyone contributes, the full pooled amount is disbursed to one member automatically.</p>
+
+          <div className="absolute -top-16 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[#6366F1] text-white text-sm rounded-lg py-2 px-4 pointer-events-none shadow-xl w-48 z-10">
+            Tip: Payout rotation happens sequentially. You can track progress in the dashboard.
+            <div className="absolute bottom-[-4px] left-1/2 transform -translate-x-1/2 w-3 h-3 bg-[#6366F1] rotate-45"></div>
+          </div>
         </div>
       </div>
       
@@ -70,5 +85,3 @@ const Landing = () => {
 };
 
 export default Landing;
-
-// Guided tour implementation
