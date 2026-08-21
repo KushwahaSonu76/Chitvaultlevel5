@@ -140,6 +140,11 @@ The following features were directly requested by real users in our Level 5 feed
 | `USR_04` | Divya Gupta | `divyag.007@gmail.com` | `GBDZ23SDUDOXDI4ZTHX6COJ3WUBVCD5L6P53WOKJQ5RB7MQKYZTD7A4M` | Group details before connecting wallet. | Preview Mode enabling non-wallet viewing of groups. | `ad7ee16` |
 | `USR_08` | Vandana Chauhan | `vandana.chauhan8899@gmail.com` | `GB4WXCCMKPPSIBOOIWROBBJDQQJTL3WNAFLTODGL4PZO423FIHCCZ473` | Visual round status. | Visual progress bar indicators for savings rounds. | `6b4577f` |
 | `USR_09` | Suraj Tiwari | `surajtiwari0909@gmail.com` | `GDMVCPYI2DFFPVHJNNYQCTO2HDMUX4UGADC3ZNCEXCV4AIRP2ISZL4DI` | Instant success notifications. | Integrated premium react-hot-toast notifications. | `1f60f03` |
+| `USR_11` | Naveen Das | `n.das4545@gmail.com` | `GBNQI6VJYUETC22FFWE2CG2FW6QJVBHUTGNBZC4PZMNWMWEQQCZ5CORI` | Light theme toggle would be highly appreciated. | Added Sun/Moon theme toggle in Navigation for Light mode. | `2076acf` |
+| `USR_12` | Vipin Yadav | `vipin99yadav@gmail.com` | `GAFBMRIG7XWJT5LMV2YUTXABGEGG6EKIAPWN7SAKVPKZK2DMOT6G6TY5` | Include group member search filter on dashboard. | Added text input search filter on Dashboard by Group ID. | `2076acf` |
+| `USR_13` | Pooja Reddy | `pooja12reddy@gmail.com` | `GAMZ5BNEUZBLUZS76USMLNN66VLEJVDUP5A62VAU2KYXNBFMOXMGAKPP` | Prominently display the active round timer. | Added estimated active round time remaining UI widget. | `2076acf` |
+| `USR_03` | Manish Singh | `9988manishsingh@gmail.com` | `GDJVDIVBCVHZSGBBMKPONIP5HDOBGMTXE6NBHRLIBHQVA7LSGF6JTPSS` | Provide direct Stellar explorer transaction lookup links. | Added "View on Stellar Explorer" link to Dashboard group cards. | `2076acf` |
+| `USR_04` | Divya Gupta | `divyag.007@gmail.com` | `GBDZ23SDUDOXDI4ZTHX6COJ3WUBVCD5L6P53WOKJQ5RB7MQKYZTD7A4M` | Provide a detailed FAQ page for ROSCA beginners. | Created a dedicated FAQ page to answer beginner questions. | `2076acf` |
 
 ---
 
