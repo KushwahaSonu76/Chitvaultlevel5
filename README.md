@@ -7,6 +7,24 @@ ChitVault is a decentralized, rotating savings and credit association (ROSCA) MV
 
 ---
 
+## ✅ Level 5 Submission Checklist (Reviewer Quick Reference)
+
+| Requirement | Status | Link / Proof |
+| :--- | :---: | :--- |
+| **Onboard 50+ unique testnet users** with real transaction activity | ✅ Done | [View 71 Users Data & Hashes](./onboarded_users.md) |
+| **Create Google Form** collecting Name, Email, Wallet, Rating + 3 Qs | ✅ Done | [Google Form](https://docs.google.com/forms/d/1Kp_zkG56EDysinfOlHi5ZHyLMhuaiQIhEAOibGx5oMw/viewform) |
+| **Export form responses** to public Google Sheet | ✅ Done | [Public Google Sheet](https://docs.google.com/spreadsheets/d/15G-xtnwIk_QB1CE5g43m5n1VwCSBjjjQWJGFGKOVo38/edit?usp=sharing) |
+| **Improve product based on feedback** & include commit links | ✅ Done | [See Feature Improvements](#-level-5-feature-implementations-feedback-traceability) |
+| **"Users Onboarded" table** (10+ users) with specific columns | ✅ Done | [See Users Table](#users-onboarded-sample-of-10-entries) |
+| **"Feedback Implementation" table** with specific columns | ✅ Done | [See Feedback Table](#-level-5-feature-implementations-feedback-traceability) |
+| **Live deployed dApp link** | ✅ Done | [Live Web App Demo](https://chitvaultlevel5.vercel.app/) |
+| **Integrate analytics/monitoring** (PostHog & Sentry) | ✅ Done | [See Analytics Screenshots](#analytics--transaction-activity) |
+| **Pitch Deck (PPT)** covering Problem, Architecture, Roadmap | ✅ Done | [Download Pitch Deck](./ChitVault_Pitch_Deck.pptx) |
+| **Demo video** showcasing product, flow, and real use cases | ✅ Done | [Watch Demo Video](https://photos.app.goo.gl/htxAw4eXdR5jDYz88) |
+| **20+ meaningful commits** & updated documentation | ✅ Done | [See Commit History Note](#14-commit-history-note) |
+
+---
+
 ## 1. Project Title & Description
 ### ChitVault: A Trustless Rotating Savings Group (Savings Fund)
 ChitVault solves the key security issue of traditional informal savings circles (known as chit funds, pardnas, or tandas) where an organizer can disappear with the group's pooled money. 
