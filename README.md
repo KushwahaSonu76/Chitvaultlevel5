@@ -134,7 +134,7 @@ We set up a comprehensive feedback loop using Google Forms directly linked from 
 ### 🌟 Level 5 Feature Implementations (Feedback Traceability)
 The following features were directly requested by real users in our Level 5 feedback form and were rapidly implemented. Below is the proof of the feedback loop:
 
-| User ID | User Name | Email Address | Wallet Address | Feedback / Suggestion | Improvement Made | Git Commit ID |
+| User ID | Name | Email | Wallet Address | Feedback Summary | Improvement Made | Git Commit ID |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | `USR_03` | Manish Singh | `9988manishsingh@gmail.com` | `GDJVDIVBCVHZSGBBMKPONIP5HDOBGMTXE6NBHRLIBHQVA7LSGF6JTPSS` | Dashboard onboarding walkthrough. | Dismissible step-by-step walkthrough on dashboard. | `ad7ee16` |
 | `USR_04` | Divya Gupta | `divyag.007@gmail.com` | `GBDZ23SDUDOXDI4ZTHX6COJ3WUBVCD5L6P53WOKJQ5RB7MQKYZTD7A4M` | Group details before connecting wallet. | Preview Mode enabling non-wallet viewing of groups. | `ad7ee16` |
