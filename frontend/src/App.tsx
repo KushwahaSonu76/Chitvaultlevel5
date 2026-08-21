@@ -5,10 +5,10 @@ import * as StellarSdk from '@stellar/stellar-sdk';
 import Landing from './pages/Landing';
 import Dashboard from './pages/Dashboard';
 import CreateChit from './pages/CreateChit';
-import ViewChit from './pages/ViewChit';
+import FAQ from './pages/FAQ';
 import posthog from 'posthog-js'
 import * as Sentry from "@sentry/react";
-import { LogOut } from 'lucide-react';
+import { LogOut, Moon, Sun } from 'lucide-react';
 import { Toaster } from 'react-hot-toast';
 // Initialize Analytics (Requires real env variables for production)
 if (import.meta.env.VITE_POSTHOG_KEY) {
@@ -32,7 +32,7 @@ if (import.meta.env.VITE_SENTRY_DSN) {
   });
 }
 
-const Navigation = () => {
+const Navigation = ({ toggleTheme, theme }: { toggleTheme: () => void, theme: string }) => {
   const { address, connect, disconnect } = useWallet();
   const [balance, setBalance] = useState<string | null>(null);
 
@@ -74,6 +74,9 @@ const Navigation = () => {
                <Link to="/create" className="border-transparent text-[#8B85A7] hover:border-[#6366F1] hover:text-[#F5F3FF] inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
                  Create Group
                </Link>
+               <Link to="/faq" className="border-transparent text-[#8B85A7] hover:border-[#6366F1] hover:text-[#F5F3FF] inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                 FAQ
+               </Link>
              </div>
            </div>
            <div className="flex items-center">
@@ -103,14 +106,17 @@ const Navigation = () => {
                  </button>
                </div>
              ) : (
-               <button
-                 onClick={connect}
-                 className="bg-gradient-to-r from-[#6366F1] to-[#A855F7] hover:opacity-90 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors cursor-pointer"
-               >
-                 Connect Wallet
+                 <button
+                   onClick={connect}
+                   className="bg-gradient-to-r from-[#6366F1] to-[#A855F7] hover:opacity-90 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors cursor-pointer"
+                 >
+                   Connect Wallet
+                 </button>
+               )}
+               <button onClick={toggleTheme} className="ml-4 text-[#8B85A7] hover:text-[#F5F3FF] p-2 bg-[#080510] rounded-full border border-[#8B85A7]/20 transition-colors" title="Toggle Theme">
+                 {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
                </button>
-             )}
-           </div>
+             </div>
          </div>
        </div>
      </nav>
@@ -118,6 +124,18 @@ const Navigation = () => {
  };
  
  function App() {
+   const [theme, setTheme] = useState('dark');
+   
+   useEffect(() => {
+     if (theme === 'light') {
+       document.body.classList.add('light-theme');
+     } else {
+       document.body.classList.remove('light-theme');
+     }
+   }, [theme]);
+
+   const toggleTheme = () => setTheme(prev => prev === 'dark' ? 'light' : 'dark');
+
    return (
      <WalletProvider>
        <Router>
@@ -134,7 +152,7 @@ const Navigation = () => {
                Share your feedback in this 1-min form
              </a>
            </div>
-           <Navigation />
+           <Navigation toggleTheme={toggleTheme} theme={theme} />
            <Toaster position="top-right" />
            <main className="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
              <Routes>
@@ -142,6 +160,7 @@ const Navigation = () => {
                <Route path="/dashboard" element={<Dashboard />} />
                <Route path="/create" element={<CreateChit />} />
                <Route path="/chit/:id" element={<ViewChit />} />
+               <Route path="/faq" element={<FAQ />} />
              </Routes>
            </main>
          </div>

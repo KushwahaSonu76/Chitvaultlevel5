@@ -6,7 +6,7 @@ import posthog from 'posthog-js';
 import { submitFeedback } from '../lib/supabase';
 import toast from 'react-hot-toast';
 import confetti from 'canvas-confetti';
-import { Copy, Share2 } from 'lucide-react';
+import { Copy, Share2, Clock } from 'lucide-react';
 
 const ViewChit = () => {
   const { id } = useParams<{ id: string }>();
@@ -18,6 +18,7 @@ const ViewChit = () => {
   const [error, setError] = useState('');
   const [feedback, setFeedback] = useState('');
   const [feedbackSubmitting, setFeedbackSubmitting] = useState(false);
+  const [timeLeft, setTimeLeft] = useState('...');
 
   useEffect(() => {
     if (id) {
@@ -26,6 +27,21 @@ const ViewChit = () => {
       return () => clearInterval(intervalId);
     }
   }, [id]);
+
+  useEffect(() => {
+    const end = new Date();
+    end.setDate(end.getDate() + 3); 
+    const timer = setInterval(() => {
+      const now = new Date();
+      const diff = end.getTime() - now.getTime();
+      if (diff <= 0) return setTimeLeft('Ended');
+      const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const m = Math.floor((diff / 1000 / 60) % 60);
+      setTimeLeft(`${d}d ${h}h ${m}m left`);
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
 
   const loadChit = async () => {
     try {
@@ -156,8 +172,12 @@ const ViewChit = () => {
             <div className="bg-[#6366F1]/10 text-[#6366F1] border border-[#6366F1]/20 px-4 py-1.5 rounded-lg font-medium mb-2 w-full text-center text-sm">
               Round {chit.current_round} of {chit.total_rounds}
             </div>
-            <div className="w-full bg-[#140E28] border border-[#8B85A7]/20 rounded-full h-2">
+            <div className="w-full bg-[#140E28] border border-[#8B85A7]/20 rounded-full h-2 mb-2">
               <div className="bg-gradient-to-r from-[#6366F1] to-[#A855F7] h-2 rounded-full transition-all duration-500" style={{ width: `${(chit.current_round / chit.total_rounds) * 100}%` }}></div>
+            </div>
+            <div className="flex items-center space-x-1 text-xs text-[#8B85A7] bg-[#080510] px-2 py-1 rounded border border-[#8B85A7]/20">
+              <Clock size={12} className="text-[#C084FC]" />
+              <span>{timeLeft}</span>
             </div>
           </div>
         </div>

@@ -8,6 +8,7 @@ const Dashboard = () => {
   const [chits, setChits] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
   const [activeTab, setActiveTab] = useState<'active' | 'completed'>('active');
+  const [searchQuery, setSearchQuery] = useState('');
   const [showTour, setShowTour] = useState(() => {
     return localStorage.getItem('hasSeenTour') !== 'true';
   });
@@ -84,23 +85,35 @@ const Dashboard = () => {
       </div>
 
       {chits.length > 0 && (
-        <div className="flex space-x-4 border-b border-[#8B85A7]/20">
-          <button
-            onClick={() => setActiveTab('active')}
-            className={`pb-2 px-1 text-sm font-medium border-b-2 transition-colors cursor-pointer ${
-              activeTab === 'active' ? 'border-[#6366F1] text-[#6366F1]' : 'border-transparent text-[#8B85A7] hover:text-[#F5F3FF]'
-            }`}
-          >
-            Active Groups
-          </button>
-          <button
-            onClick={() => setActiveTab('completed')}
-            className={`pb-2 px-1 text-sm font-medium border-b-2 transition-colors cursor-pointer ${
-              activeTab === 'completed' ? 'border-[#6366F1] text-[#6366F1]' : 'border-transparent text-[#8B85A7] hover:text-[#F5F3FF]'
-            }`}
-          >
-            Completed Groups
-          </button>
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center space-y-4 sm:space-y-0 border-b border-[#8B85A7]/20 pb-4">
+          <div className="flex space-x-4">
+            <button
+              onClick={() => setActiveTab('active')}
+              className={`pb-2 px-1 text-sm font-medium border-b-2 transition-colors cursor-pointer ${
+                activeTab === 'active' ? 'border-[#6366F1] text-[#6366F1]' : 'border-transparent text-[#8B85A7] hover:text-[#F5F3FF]'
+              }`}
+            >
+              Active Groups
+            </button>
+            <button
+              onClick={() => setActiveTab('completed')}
+              className={`pb-2 px-1 text-sm font-medium border-b-2 transition-colors cursor-pointer ${
+                activeTab === 'completed' ? 'border-[#6366F1] text-[#6366F1]' : 'border-transparent text-[#8B85A7] hover:text-[#F5F3FF]'
+              }`}
+            >
+              Completed Groups
+            </button>
+          </div>
+          
+          <div className="relative w-full sm:w-64">
+            <input 
+              type="text" 
+              placeholder="Search by Group ID..." 
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full bg-[#080510] border border-[#8B85A7]/30 text-[#F5F3FF] rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-[#6366F1]"
+            />
+          </div>
         </div>
       )}
 
@@ -118,7 +131,9 @@ const Dashboard = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {chits.filter(chit => {
             const isCompleted = chit.current_round >= chit.total_rounds;
-            return activeTab === 'active' ? !isCompleted : isCompleted;
+            const matchesTab = activeTab === 'active' ? !isCompleted : isCompleted;
+            const matchesSearch = chit.id.toString().includes(searchQuery);
+            return matchesTab && matchesSearch;
           }).map(chit => (
             <div key={chit.id} className="bg-[#140E28] p-6 rounded-xl border border-[#8B85A7]/20 shadow-sm hover:shadow-md transition-shadow">
               <div className="flex justify-between items-start mb-4">
@@ -141,14 +156,21 @@ const Dashboard = () => {
                   <span className="font-medium text-[#F5F3FF]">Round {chit.current_round} of {chit.total_rounds}</span>
                 </div>
               </div>
-              <Link to={`/chit/${chit.id}`} className="w-full block text-center bg-[#080510] hover:bg-[#080510]/80 text-[#6366F1] font-medium py-2 rounded-lg transition-colors border border-[#8B85A7]/20">
-                View Details
-              </Link>
+              <div className="space-y-2">
+                <Link to={`/chit/${chit.id}`} className="w-full block text-center bg-[#080510] hover:bg-[#080510]/80 text-[#6366F1] font-medium py-2 rounded-lg transition-colors border border-[#8B85A7]/20">
+                  View Details
+                </Link>
+                <a href={`https://stellar.expert/explorer/testnet/contract/CDUR55MLZLS7ROZBJ5PK2AQH3NBDC6KSCXXYZAEHLBQHRBSZPS2UCIZF`} target="_blank" rel="noopener noreferrer" className="w-full block text-center text-xs text-[#8B85A7] hover:text-[#F5F3FF] py-1 transition-colors">
+                  View on Stellar Explorer ↗
+                </a>
+              </div>
             </div>
           ))}
           {chits.filter(chit => {
             const isCompleted = chit.current_round >= chit.total_rounds;
-            return activeTab === 'active' ? !isCompleted : isCompleted;
+            const matchesTab = activeTab === 'active' ? !isCompleted : isCompleted;
+            const matchesSearch = chit.id.toString().includes(searchQuery);
+            return matchesTab && matchesSearch;
           }).length === 0 && (
             <div className="col-span-full py-10 text-center text-[#8B85A7]">
               No {activeTab} groups found.

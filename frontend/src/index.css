@@ -35,3 +35,25 @@ body {
   background-color: rgba(20, 14, 40, 0.6) !important;
 }
 
+body.light-theme {
+  background-color: #F8FAFC;
+  color: #0F172A;
+}
+
+body.light-theme .bg-\[\#140E28\], body.light-theme .bg-\[\#080510\] {
+  background-color: #FFFFFF !important;
+  border-color: #E2E8F0 !important;
+  color: #1E293B !important;
+}
+
+body.light-theme .text-\[\#F5F3FF\] {
+  color: #0F172A !important;
+}
+
+body.light-theme .text-\[\#8B85A7\] {
+  color: #475569 !important;
+}
+
+body.light-theme .border-\[\#8B85A7\]\/20 {
+  border-color: #E2E8F0 !important;
+}
